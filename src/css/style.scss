@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Josefin+Sans&display=swap");
+
+// Core
+@import "./core/vars";
+@import "./core/mixins";
+@import "./core/common";
+
+// Common components
+@import "./components/common/logo";
+@import "./components/common/button";
+@import "./components/common/navigation";
+
+// Components
+@import "./components/header";
+@import "./components/choose";
+@import "./components/icon";
+@import "./components/spain";
+@import "./components/tourist";
+@import "./components/footer";

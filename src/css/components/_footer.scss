@@ -1,0 +1,38 @@
+.footer {
+    background-color: $footer-bg-color;
+    @include flex(center, center, column);
+    padding: 53px 0;
+    @include media($screen-tablet) {
+        padding: 120px 0px 53px;
+    }
+    &__logo {
+        @include text ($H500, 400, $white);
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        @include text ($H100, 400, $grey);
+        font-family: $secondary-font;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+&__list {
+    list-style: none;
+    @include flex(center, center);
+   
+}
+&__item:not(:last-child) {
+    margin-right: 20px;
+}
+&__icon {
+    fill: $white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover{
+        fill: $blue;
+        transform: scale(1.5);
+    }
+}
+}

@@ -1,0 +1,142 @@
+.header {
+
+    position: relative;
+    background-image: url(../images/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    @include flex(center, center, column);
+
+    @include media($screen-desktop) {
+        padding-top: 265px;
+        @include flex(flex-start, center, column);
+        background-attachment: fixed;
+    }
+
+    &__container {
+        width: 85%;
+
+        @include media($screen-tablet) {
+            width: fit-content;
+        }
+    }
+
+    &__title {
+        @include text($H600, 700, $white);
+        font-family: $secondary-font;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 4px;
+
+        @include media($screen-tablet) {
+            @include text($H700, 700, $white);
+            font-family: $secondary-font;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-family: $secondary-font;
+        @include text($H300, 400, $white);
+        letter-spacing: 5px;
+        margin-bottom: 50px;
+        text-align: center;
+
+        @include media($screen-tablet) {
+            @include text($H400, 400, $white);
+            font-family: $secondary-font;
+        }
+    }
+
+    &__form {
+        margin-bottom: 120px;
+    }
+
+    &__form-wrapper {
+        background-color: none;
+        width: 100%;
+        @include flex(flex-start, center, column);
+
+        @include media($screen-tablet){
+            @include flex;
+            background-color: $white;
+            border: 2px solid $white;
+        }
+    }
+
+    &__input {
+        height: 58px;
+        max-width: 500px;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 0px 15px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        &::placeholder {
+            font-family: $secondary-font;
+            @include text($H100, 400, $placeholder-color);
+            letter-spacing: 0.2em;
+            text-align: center;
+        }
+
+        &:focus {
+            border: 2px solid $blue;
+        }
+
+        @include media($screen-tablet) {
+            width: 500px;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__search {
+        @include flex(center, center);
+        background-color: $btn-color;
+        @include text($H100, 400, $white);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        height: 58px;
+        width: 150px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        float: right; 
+        &:hover {
+            color: $dark;
+            transition: ease-in .4s;
+            background-color: #87CEFA;
+        }
+    }
+
+    &__search-text {
+        margin-right: 15px;
+       padding-top: 5px;
+    }
+
+    &__search-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__scroll {
+        @include flex(flex-start, center, column); 
+        margin-bottom: 20px;
+
+        @include media($screen-tablet){
+            margin-bottom: 0;
+        } 
+    }
+
+    &__scroll-text {
+        font-family: $secondary-font;
+        @include text($H100, 400, $white);
+        letter-spacing: 0.2em;
+        margin-bottom: 15px;
+    }
+}

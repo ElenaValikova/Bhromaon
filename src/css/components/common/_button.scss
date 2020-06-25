@@ -1,0 +1,20 @@
+.button {
+  @include text($H100, 400, $white);
+  padding: 23px 36px;
+    background-color: $btn-color;
+    cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  transition: all 0.2s ease;
+  display: inline-block;
+ 
+  &:hover {
+      box-shadow: 0 2px 5px rgb(3, 131, 235);
+  }
+ 
+}
+ .button:hover {
+    color: $dark;
+    transition: ease-in .4s;
+    background-color: #87CEFA;
+}
